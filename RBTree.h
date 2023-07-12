@@ -5,9 +5,9 @@ class Node
     public:
     T data;
     char color;
-    Node* left;
-    Node* right;
-    Node* parent;
+    Node<T>* left;
+    Node<T>* right;
+    Node<T>* parent;
 };
 
 // Class the define the Red Black Tree
@@ -25,8 +25,8 @@ class RBTree
     void preTraverse(Node<T>* node);
     void inTraverse(Node<T>* node);
     bool search(Node<T>* node, T data);
-    Node<T>* leftRotate(Node<T>* x);
-    Node<T>* rightRotate(Node<T>* y);
+    void leftRotate(Node<T>* x);
+    void rightRotate(Node<T>* y);
     void delFix(Node<T>* node);
     void delNode(Node<T>* node, T data);
     void merge(Node<T>* parent, Node<T>* child);

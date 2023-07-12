@@ -122,7 +122,7 @@ void RBTree<T>::printTree()
 
 // Function to perform left rotation in red black tree
 template <typename T>
-Node<T>* RBTree<T>::leftRotate(Node<T>* x)
+void RBTree<T>::leftRotate(Node<T>* x)
 {
     Node<T>* y = x->right;
     // Rotate left
@@ -144,7 +144,7 @@ Node<T>* RBTree<T>::leftRotate(Node<T>* x)
 
 // Function to perform right rotation in red black tree
 template <typename T>
-Node<T>* RBTree<T>::rightRotate(Node<T>* y)
+void RBTree<T>::rightRotate(Node<T>* y)
 {
     Node<T>* x = y->left;
     y->left = x->right;
