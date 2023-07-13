@@ -432,27 +432,83 @@ void RBTree<T>::delNode(T data)
 int main()
 {
     // Initiate the Red Black Tree
-    RBTree<int> rbtree;
-    // Insert a few node to the tree
-    int random[] = {5, 7, 8, 9, 3, 1, 13, 10, 25, 37, 46, 106, 67, 55, 92, 84};
-    for(int i = 0; i < sizeof(random)/sizeof(int); ++i)
-        rbtree.insert(random[i]);
-    // Traverse the tree
-    rbtree.inTraverse();
-    // Search for a few node in the tree
-    std::cout<<"Node 5 is "<<(rbtree.search(5) ? "" : "not ")<<"in the red black tree"<<std::endl;
-    std::cout<<"Node 37 is "<<(rbtree.search(37) ? "" : "not ")<<"in the red black tree"<<std::endl;
-    std::cout<<"Node 230 is "<<(rbtree.search(230) ? "" : "not ")<<"in the red black tree"<<std::endl;
-    // Display the shape of the key
-    rbtree.printTree();
-    // Delete a few node in the key
-    rbtree.delNode(9);
-    rbtree.delNode(106);
-    rbtree.delNode(550);
-    // Search for deleted node
-    std::cout<<"Node 9 is "<<(rbtree.search(9) ? "" : "not ")<<"in the red black tree"<<std::endl;
-    std::cout<<"Node 106 is "<<(rbtree.search(106) ? "" : "not ")<<"in the red black tree"<<std::endl;
-    // Display the tree again
-    rbtree.printTree();
+    // RBTree<int> rbtree;
+    // // Insert a few node to the tree
+    // int random[] = {5, 7, 8, 9, 3, 1, 13, 10, 25, 37, 46, 106, 67, 55, 92, 84};
+    // for(int i = 0; i < sizeof(random)/sizeof(int); ++i)
+    //     rbtree.insert(random[i]);
+    // // Traverse the tree
+    // rbtree.inTraverse();
+    // // Search for a few node in the tree
+    // std::cout<<"Node 5 is "<<(rbtree.search(5) ? "" : "not ")<<"in the red black tree"<<std::endl;
+    // std::cout<<"Node 37 is "<<(rbtree.search(37) ? "" : "not ")<<"in the red black tree"<<std::endl;
+    // std::cout<<"Node 230 is "<<(rbtree.search(230) ? "" : "not ")<<"in the red black tree"<<std::endl;
+    // // Display the shape of the key
+    // rbtree.printTree();
+    // // Delete a few node in the key
+    // rbtree.delNode(9);
+    // rbtree.delNode(106);
+    // rbtree.delNode(550);
+    // // Search for deleted node
+    // std::cout<<"Node 9 is "<<(rbtree.search(9) ? "" : "not ")<<"in the red black tree"<<std::endl;
+    // std::cout<<"Node 106 is "<<(rbtree.search(106) ? "" : "not ")<<"in the red black tree"<<std::endl;
+    // // Display the tree again
+    // rbtree.printTree();
+
+
+    // Structure version
+    Infor Gia;
+    Gia.name = "Gia";
+    Gia.pass = "GialoveTran";
+    Gia.grade = 21;
+
+    Infor Tran;
+    Tran.name = "Tran";
+    Tran.pass = "TranloveGia";
+    Tran.grade = 19;
+
+    Infor Khoa;
+    Khoa.name = "Khoa";
+    Khoa.pass = "Khoarobot";
+    Khoa.grade = 21;
+
+    Infor Khoi;
+    Khoi.name = "Khoi";
+    Khoi.pass = "Khoi1018";
+    Khoi.grade = 21;
+
+    Infor Duy;
+    Duy.name = "Duy";
+    Duy.pass = "Duyrobot";
+    Duy.grade = 21;
+
+    Infor Nam;
+    Nam.name = "Nam";
+    Nam.pass = "NamSin";
+    Nam.grade = 21;
+
+    RBTree<Infor> rbtree;
+    rbtree.insert(Gia);
+    rbtree.insert(Tran);
+    rbtree.insert(Khoa);
+    rbtree.insert(Khoi);
+    rbtree.insert(Duy);
+    rbtree.insert(Nam);
+
+    // Search the node in the tree
+    std::cout<<"Node Gia is "<<(rbtree.search(Gia) ? "" : "not ")<<"in the tree"<<std::endl;
+    std::cout<<"Node Tran is "<<(rbtree.search(Tran) ? "" : "not ")<<"in the tree"<<std::endl;
+
+    // Create new node and search
+    Infor Phu;
+    Phu.name = "Abi";
+    Phu.pass = "PhuGermany";
+    Phu.grade = 22;
+
+    rbtree.insert(Phu);
+    std::cout<<"Node Phu is "<<(rbtree.search(Phu) ? "" : "not ")<<"in the tree"<<std::endl;
+    rbtree.delNode(Phu);
+    std::cout<<"Node Phu is "<<(rbtree.search(Phu) ? "" : "not ")<<"in the tree"<<std::endl;
+
     return 0;
 }
