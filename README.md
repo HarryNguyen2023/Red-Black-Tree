@@ -17,6 +17,9 @@ Red black tree has many practical applications:
 - Virtual memory manager in Linux kernel.
 - Index tables in MySQL.
 
+### My updates:
+Even though, most of the tutorial both in books and online only use the integer as the data type of the red-black tree, I have tried to create a more general red-black tree that can utilizes most of the basic data types in Cpp, even structure and union.
+
 ### References:
 [1]. Red-Black Tree, https://www.programiz.com/dsa/red-black-tree.
 
