@@ -1,3 +1,8 @@
+#ifndef RED_BLACK_TREE_H
+#define RED_BLACK_TREE_H
+
+#include <string>
+
 // Define the struct of user information
 typedef struct Infor
 {
@@ -68,3 +73,5 @@ class RBTree
     bool search(T data);
     void delNode(T data);
 };
+
+#endif
