@@ -509,6 +509,7 @@ int main()
     std::cout<<"Node Phu is "<<(rbtree.search(Phu) ? "" : "not ")<<"in the tree"<<std::endl;
     rbtree.delNode(Phu);
     std::cout<<"Node Phu is "<<(rbtree.search(Phu) ? "" : "not ")<<"in the tree"<<std::endl;
+    std::cout<<"Node Nam is "<<(rbtree.search(Nam) ? "" : "not ")<<"in the tree"<<std::endl;
 
     return 0;
 }
